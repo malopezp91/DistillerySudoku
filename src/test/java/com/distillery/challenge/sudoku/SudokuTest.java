@@ -123,6 +123,22 @@ final class SudokuTest {
     }
 
     @Test
+    public void isValid_sudokuIsValidWithFullBox_returnsTrue() {
+        char[][] input = new char[][]{
+                new char[]{'.', '.', '.', '.', '.', '.', '.', '.', '.'},
+                new char[]{'.', '.', '.', '.', '.', '.', '.', '.', '.'},
+                new char[]{'.', '.', '.', '.', '.', '.', '.', '.', '.'},
+                new char[]{'.', '.', '.', '.', '.', '.', '.', '.', '.'},
+                new char[]{'.', '.', '.', '.', '.', '.', '.', '.', '.'},
+                new char[]{'.', '.', '.', '.', '.', '.', '.', '.', '.'},
+                new char[]{'.', '.', '.', '.', '.', '.', '1', '2', '3'},
+                new char[]{'.', '.', '.', '.', '.', '.', '4', '5', '6'},
+                new char[]{'.', '.', '.', '.', '.', '.', '7', '8', '9'}};
+
+        assertTrue(sudoku.isValidSudoku(input));
+    }
+
+    @Test
     public void isValid_sudokuIsValidWithFullElements_returnsTrue() {
         char[][] input = new char[][]{
                 new char[]{'1', '2', '3', '6', '7', '8', '9', '4', '5'},

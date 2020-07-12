@@ -79,7 +79,7 @@ final class Sudoku {
         List<Set<Character>> helperList = new ArrayList<>();
         for (int rowIndex = 0; rowIndex < BOARD_SIZE; rowIndex++) {
 
-            // When we hit a row that represents a box, Sets are rebooted
+            // When we hit a row that is the first row of a box, Sets are rebooted
             if (rowIndex % BOX_SIZE == 0) {
                 helperList.clear();
                 int numOfBoxes = BOARD_SIZE / BOX_SIZE;
